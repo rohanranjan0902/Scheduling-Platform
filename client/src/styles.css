@@ -1,0 +1,345 @@
+:root {
+  --bg: #050816;
+  --bg-elevated: #0f172a;
+  --border-subtle: #1e293b;
+  --accent: #6366f1;
+  --accent-soft: rgba(99, 102, 241, 0.15);
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+  --danger: #ef4444;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1e293b 0, #020617 50%, #000 100%);
+  color: var(--text);
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: rgba(15, 23, 42, 0.95);
+  border-right: 1px solid var(--border-subtle);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
+}
+
+.topbar-title {
+  font-size: 1rem;
+}
+
+.page-container {
+  padding: 1.5rem;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+}
+
+.card-header {
+  padding: 1.25rem 1.5rem 0.5rem;
+}
+
+.card-subtitle {
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.card-body {
+  padding: 0 1.5rem 1.25rem;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea,
+select {
+  background: #020617;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-subtle);
+  padding: 0.5rem 0.6rem;
+  color: var(--text);
+}
+
+textarea {
+  min-height: 60px;
+}
+
+button {
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  border-color: var(--border-subtle);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+.form-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list-item {
+  padding: 0.6rem 0.2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 0.95rem;
+}
+
+.item-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.error-text {
+  margin-top: 0.25rem;
+  color: var(--danger);
+  font-size: 0.85rem;
+}
+
+.field-inline {
+  max-width: 320px;
+}
+
+.availability-grid {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.day-row.enabled {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 0.5rem;
+  padding-inline: 0.6rem;
+}
+
+.time-range {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tab {
+  background: transparent;
+  border-color: transparent;
+}
+
+.tab.active {
+  background: var(--accent-soft);
+  border-color: rgba(129, 140, 248, 0.6);
+}
+
+.public-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.public-card {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.85);
+}
+
+.public-event-header h1 {
+  margin: 0 0 0.25rem;
+}
+
+.public-event-header p {
+  margin: 0.15rem 0;
+}
+
+.public-event-header .timezone {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.public-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.date-picker,
+.slot-picker {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.slots-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.slot {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: var(--border-subtle);
+  padding-inline: 0.7rem;
+}
+
+.slot.active {
+  background: var(--accent);
+  border-color: transparent;
+}
+
+.booking-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 64px);
+  }
+
+  .public-body {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
